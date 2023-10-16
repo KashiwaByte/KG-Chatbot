@@ -4,3 +4,4 @@ joblib
 numpy
 jieba
 scikit-learn
+gradio

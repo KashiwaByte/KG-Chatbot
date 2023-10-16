@@ -30,7 +30,7 @@ class GenerQuestionClassification():
                '12': 'nnt 电影数量',
                '13': 'nnt 出生日期',
                }
-        with open(self.question_classification_path, 'w') as f:
+        with open(self.question_classification_path, 'w',encoding="utf-8") as f:
             json.dump(dic, f, ensure_ascii=False)  # 会在目录下生成一个*.json的文件，文件内容是dict数据转成的json数据  ensure_ascii=False
         print("save question classification success...")
 
@@ -45,7 +45,7 @@ class GenerVocab():
 
     def cut_word(self, file_path):
         result_list = []
-        with open(file_path, "r") as temp_f:
+        with open(file_path, "r",encoding="utf-8") as temp_f:
             for sentence in temp_f.readlines():
                 sentence = sentence.strip()
                 temp = jieba.lcut(sentence)
@@ -66,7 +66,7 @@ class GenerVocab():
 
     def save_vocab(self):
         dic = self.get_all_word()
-        with open(self.save_vocab_path, 'w') as f:
+        with open(self.save_vocab_path, 'w',encoding="utf-8") as f:
             json.dump(dic, f, ensure_ascii=False)  # 会在目录下生成一个*.json的文件，文件内容是dict数据转成的json数据  ensure_ascii=False
         print("save vocab success...")
 
@@ -77,7 +77,7 @@ class Trainer(GenerVocab):
         self.vocab = self.load_vocab()
 
     def load_vocab(self):
-        with open(self.save_vocab_path, "r") as f:
+        with open(self.save_vocab_path, "r",encoding="utf-8") as f:
             vocab = json.loads(f.read())
         return vocab
 

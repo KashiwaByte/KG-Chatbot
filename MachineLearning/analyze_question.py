@@ -13,12 +13,12 @@ class AnalysisQuestion():
         self.question_class = self.load_question_classification()
 
     def load_vocab(self):
-        with open(self.vocab_path, "r") as f:
+        with open(self.vocab_path, "r", encoding="utf-8") as f:
             vocab = json.loads(f.read())
         return vocab
 
     def load_question_classification(self):
-        with open(self.question_classification_path, "r") as f:
+        with open(self.question_classification_path, "r", encoding="utf-8") as f:
             question_classification = json.loads(f.read())
         return question_classification
 

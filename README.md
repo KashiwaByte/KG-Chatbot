@@ -15,9 +15,23 @@ pip install -r requirements.txt
 
 #### 效果图:
 
+Gradio演示
+```bash
+python app.py
+```
+![gradio](assets/gradio.png)
+
+你可以通过Gradio输出框下方的Flag功能保留输出结果到本地。
+
+![Flag](assets/flag_example.png)
+
+CLI演示
 ```bash
 python chatbot.py
 ```
 
+
 ![example](assets/example.png)
+
+
 

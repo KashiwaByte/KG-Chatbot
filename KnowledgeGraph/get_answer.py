@@ -1,9 +1,10 @@
 from py2neo import *
+import py2neo
 
 
 class Get_answer():
     def __init__(self):
-        self.graph = Graph("http://localhost:7474", username="neo4j", password="123")
+        self.graph = Graph("http://localhost:7474",name="neo4j", password="NEO123456neo")
 
     def get_data(self, index, params):
         query = ''
